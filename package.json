@@ -1,0 +1,79 @@
+{
+  "name": "exercise-guide-illustrated",
+  "version": "1.0.0",
+  "description": "Interactive exercise guide with illustrated printable materials and QR code integration",
+  "main": "src/index.js",
+  "homepage": ".",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:ci": "jest --coverage --watchAll=false",
+    "eject": "react-scripts eject",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "generate-pdf": "node scripts/generatePDF.js",
+    "generate-qr": "node scripts/generateQR.js",
+    "optimize-images": "node scripts/optimizeImages.js",
+    "deploy": "npm run build && npm run deploy:static",
+    "deploy:static": "node scripts/deploy.js",
+    "docker:build": "docker build -t exercise-guide .",
+    "docker:run": "docker run -p 3000:3000 exercise-guide"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0",
+    "react-scripts": "5.0.1",
+    "lucide-react": "^0.263.1",
+    "qrcode.react": "^3.1.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "eslint": "^8.36.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "jest": "^27.5.1",
+    "jest-environment-jsdom": "^27.5.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phillipbroberts/exercise-guide-illustrated"
+  },
+  "keywords": [
+    "exercise",
+    "fitness",
+    "training",
+    "illustrations",
+    "qr-codes",
+    "printable",
+    "interactive",
+    "react"
+  ],
+  "author": "Phillip Roberts",
+  "license": "MIT"
+}
